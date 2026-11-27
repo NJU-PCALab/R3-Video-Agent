@@ -6,6 +6,10 @@
 
 Give the harness a story, a cast with stable identities, a language and a duration window. It drafts and reviews the screenplay, prepares a shot plan, generates reference assets, then produces and reviews one audiovisual shot at a time. The main outputs are a film with its native soundtrack, an ordered record of the selected takes and a report with unresolved review findings.
 
+![R³ Video Agent framework showing story setup, shot generation and critique, revision, replanning, and within-story memory](docs/r3-framework.png)
+
+The harness uses feedback from generated audio and video to guide production shot by shot. **Revise** adjusts the prompt, references, or duration before regenerating the current shot. **Replan** updates upcoming shots based on the selected sequence. **Remember** records interventions and their outcomes so relevant experience can guide later shots in the same story.
+
 ## How the harness makes a film
 
 1. **Plan the story.** The screenwriter and editor check the event order, character motivations, dialogue and ending. The director expands scenes into ordered shots with a duration, speaker assignments, reference requirements and physical render directions. Admission checks cover the frame budget, executable shot fields and registered asset IDs. Chinese and English dialogue are supported.

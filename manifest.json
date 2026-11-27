@@ -2,7 +2,7 @@
   "files": {
     ".gitignore": "f2b8c7eb9b81f2b24257a9e600000d7bdd9746f6b06639eea186cbd111b5b68d",
     "LICENSE": "72884eb1ef32f4974124c83b428147c93b82046d31e4d7fedd36856f6220505e",
-    "README.md": "13d6543fdff7fc63fa263168ba948aeaf386e485589e0b85cd32d7ee079cc3ef",
+    "README.md": "bce699fa2de6430d9160472065158141efbc0bd3c8d55e3330a0681264ae0aab",
     "backend/lib/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "backend/lib/h3_av/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "backend/lib/h3_av/config.py": "59edd86730e652a976811ae3a86b9bd40169a848d3deb7393db67fae2e01ce53",
@@ -14,6 +14,7 @@
     "config.example.json": "e1b702b65a1eeee4cab82588359ef51bd1fb93cf4fed44ae5023a5b6f67a7a2b",
     "docs/R3_VideoAgent.pdf": "d74d78509646414c1be79250559cea91184ca6c1e3b97881816eeb59ac524313",
     "docs/media-adapters.md": "01bd81f8c2bbf8d850de49d4dff3134bb84c947cc0593c4b4cb76877ce5c4f3d",
+    "docs/r3-framework.png": "f67ae19dd23889509f643e12acb63cf2e134df8bcf4cb8ab99a0984ccf30f15e",
     "examples/authorization.example.json": "5c75e396ed8d259b729a6373de5efc72a03fc9eabf19031a460bb1d65c8364d3",
     "examples/h3.example.yaml": "78ed023e6ed77c93067d4729a45c847a888da542475197cf3e71dbc6a8308621",
     "examples/model_sources.json": "7b0841bff268c629d469c54958b99fa84f1b0f31998a0a7dc02864deec71a728",
