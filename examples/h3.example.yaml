@@ -1,0 +1,17 @@
+backend: diffsynth
+diffsynth_python: /absolute/path/to/h3-worker-python
+diffsynth_project: /absolute/path/to/diffsynth-checkout
+ref2va_weights: /absolute/path/to/ref2va-weights
+fl2va_weights: /absolute/path/to/fl2va-weights
+cuda_device: '0'
+export_width: 1344
+export_height: 768
+acceleration_profile: balanced
+inference_steps: 50
+attention_backend: flash_attn_3
+pdd_base_variant: ref2va
+pdd_lora_path: /absolute/path/to/ref2va-adapter
+pdd_lora_sha256: 111c82e669f6e20e628228172edf39395f1a9fc3ad049793895e542c0f55b18c
+fl2va_pdd_lora_path: /absolute/path/to/fl2va-adapter
+fl2va_pdd_lora_sha256: 0b29be7042d883970eb0c20774a9ba03d95669ed80a721bb4d21be8ea0d0a196
+vram_reserve_gb: 5

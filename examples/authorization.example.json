@@ -1,0 +1,6 @@
+{
+  "benchmark_id": "r3-public-example",
+  "story_indices": [1],
+  "physical_gpus": [0],
+  "duration_seconds": [150, 300]
+}

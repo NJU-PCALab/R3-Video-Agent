@@ -1,0 +1,147 @@
+{
+  "target_seconds": 225,
+  "max_final_seconds": 300,
+  "max_real_takes_per_clip": 6,
+  "global_checkpoint_every": 3,
+  "review_system": {
+    "version": "feedback_v1",
+    "visual_provider": "doubao",
+    "audiovisual_provider": "gemini",
+    "decision_provider": "glm",
+    "scores": "advisory_only",
+    "visual_sample_fps": 4,
+    "max_real_takes_per_clip": 6,
+    "observation_protocol": "content_rsi_v4",
+    "visual_scope": "complete_previous_and_current_sampled_sequences",
+    "audiovisual_scope": "current_video_and_native_wav_only",
+    "max_investigations_per_role_per_candidate": 1,
+    "max_text_reconciliation_rounds": 1,
+    "evidence_policy": "observed_facts_v1",
+    "decision_contract": "grounded_dispositions_v1",
+    "applicability_contract": "speech_voice_applicability_v1"
+  },
+  "editing_policy": {
+    "automatic_frame_anchor_switch": false,
+    "background_music": "explicit_model_planned_cues_only",
+    "version": "shot_cuts_v1"
+  },
+  "generation_contract": {
+    "version": "cast_reference_contract_v2",
+    "cast": {
+      "Eleanor": {
+        "image_asset_id": "eleanor_image",
+        "voice_asset_id": "eleanor_voice",
+        "description": "An adult railway station keeper in a dark green wool coat."
+      },
+      "Theo": {
+        "image_asset_id": "theo_image",
+        "voice_asset_id": "theo_voice",
+        "description": "An adult traveler in a tan raincoat carrying a canvas satchel."
+      }
+    }
+  },
+  "speech_verification": {
+    "version": "grounded_speech_release_v1",
+    "asr_model_path": "/path/to/asr-weights",
+    "asr_python": "/path/to/asr-python"
+  },
+  "gpu_resource_admission": "assigned_gpu_idle_v1",
+  "execution_contract": "asset_worker_lifecycle_v1",
+  "duration_admission": "short_story_frames_v1",
+  "worker_lifecycle_policy": {
+    "queue_timeout_seconds": 21600,
+    "resource_poll_seconds": 5,
+    "handoff_timeout_seconds": 90,
+    "exit_poll_seconds": 0.25
+  },
+  "completion_policy": {
+    "version": "completion_first_v1",
+    "experience_loop": "lightweight_experience_v1",
+    "dialogue_integrity": "literal_speech_v1",
+    "max_video_takes": 6,
+    "formal_content_acceptance_independent": true
+  },
+  "memory_policy": {
+    "scope": "within_story"
+  },
+  "cross_host_rate_reservation": "atomic_directory_v1",
+  "runtime_import_probe": "host_runtime_compute_v2",
+  "production_contract": {
+    "version": "bounded_shot_inputs_v1",
+    "max_action_beats": 3
+  },
+  "character_reference_policy": {
+    "version": "character_reference_stages_v1",
+    "require_stage_declarations": true,
+    "max_stages_per_character": 3,
+    "max_candidates_per_character": 2,
+    "allocation_authority": "host_family_cap_v1",
+    "role_transition_modes": {}
+  },
+  "framework_version": "r3",
+  "glm_interval_seconds": 62,
+  "doubao_interval_seconds": 8,
+  "lite_root": "/path/to/isolated-workspace",
+  "framework_release": "/path/to/checkout",
+  "production_root": "/path/to/shared-backend",
+  "h3_config": "/path/to/h3.yaml",
+  "media_bin": "/path/to/ffmpeg-bin",
+  "rate_limit_root": "/path/to/shared-rate-limits",
+  "authorization": "/path/to/private-authorization.json",
+  "text_route": {
+    "base_url_env": "R3_TEXT_BASE_URL",
+    "api_key_env": "R3_TEXT_API_KEY",
+    "model": "GLM-5.3-Flash",
+    "max_output_tokens": 32768,
+    "reasoning_effort": "low"
+  },
+  "doubao_route": {
+    "base_url_env": "R3_VISUAL_BASE_URL",
+    "api_key_env": "R3_VISUAL_API_KEY",
+    "model": "Doubao-Seed-2.0-pro"
+  },
+  "image_provider": {
+    "kind": "local_worker",
+    "model": "Qwen-Image-2.1",
+    "parameters": {
+      "height": 768,
+      "num_inference_steps": 40,
+      "true_cfg_scale": 1.0,
+      "width": 1344
+    },
+    "timeout_seconds": 1800,
+    "device": "0",
+    "python": "/path/to/image-python",
+    "model_path": "/path/to/image-weights",
+    "revision": "local-config-sha256:cf1ecd104ea090855d60d8cec0895c1e9d6ee41b2f87e231b678beecd1cf7809"
+  },
+  "audio_provider": {
+    "device": "0",
+    "python": "/path/to/audio-python",
+    "lock_file": "/path/to/shared-backend/service_logs/gpu_0.lock",
+    "models": {
+      "voice_design": "/path/to/voice_design",
+      "voice_clone": "/path/to/voice_clone",
+      "music": "/path/to/music"
+    },
+    "music_source": "/path/to/music-backend",
+    "manifest": "/path/to/audio-model-manifest.json",
+    "readiness": "/path/to/isolated-workspace/verification/audio_runtime_probe/readiness.json"
+  },
+  "task_contract": {
+    "version": "benchmark_task_parameters_v2",
+    "benchmark_id": "r3-public-example",
+    "story_index": 1,
+    "physical_gpu": 0,
+    "language": "English",
+    "min_seconds": 150,
+    "max_seconds": 300,
+    "source_sha256": "ce842cf501720756cd350d5cc9f2255ed5fc4fde1ebe9f7b126a4893eff507b5"
+  },
+  "gemini_url_env": "R3_AV_URL",
+  "gemini_key_env": "GEMINI_API_KEY",
+  "gemini_auth": "api_key",
+  "exact_landscape_canvas": true,
+  "video_aspect_ratio": "16:9",
+  "harness_source_rsi": false
+}

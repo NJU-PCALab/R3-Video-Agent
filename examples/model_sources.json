@@ -1,0 +1,23 @@
+{
+  "voice_design": {
+    "repo": "Qwen/Qwen3-TTS-12Hz-1.7B-VoiceDesign",
+    "revision": "5ecdb67327fd37bb2e042aab12ff7391903235d3"
+  },
+  "voice_clone": {
+    "repo": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+    "revision": "fd4b254389122332181a7c3db7f27e918eec64e3"
+  },
+  "music": {
+    "repo": "ACE-Step/Ace-Step1.5",
+    "revision": "19671f406d603126926c1b7e2adc169acbcade22",
+    "runtime_code_revision": "ca1e85fe9430179831e6bc6be790c332190a3866"
+  },
+  "qwen-tts": {
+    "repo": "https://github.com/QwenLM/Qwen3-TTS",
+    "revision": "022e286b98fbec7e1e916cb940cdf532cd9f488e"
+  },
+  "ace-step": {
+    "repo": "https://github.com/ace-step/ACE-Step-1.5",
+    "revision": "ca1e85fe9430179831e6bc6be790c332190a3866"
+  }
+}
